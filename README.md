@@ -28,6 +28,29 @@ The backend is built with:
 
 ## Installation
 
+**Add Backend Environment Variable**
+
+# .env
+
+```bash
+# .env
+DB_HOST=localhost
+DB_PORT=3306
+DB_USERNAME=root # depending on your username
+DB_PASSWORD=12345678 # depending on your password
+DB_NAME=earthquakes # depending on your db name
+SERVER_PORT=4000
+CORS_ORIGIN=http://localhost:3000
+CSV_FILE_PATH=data/earthquakes1970-2014.csv
+```
+
+**Add Frontend Environment Variable**
+
+```bash
+# .env
+NEXT_PUBLIC_GRAPHQL_URI=http://localhost:4000/graphql
+```
+
 To set up the application, follow these steps:
 
 1. **Install `pnpm` globally**:
@@ -42,29 +65,21 @@ To set up the application, follow these steps:
    pnpm install:all
 ```
 
-3. To run both the frontend and backend in development mode simultaneously, use the following command:
+4. To apply the generated migrations to your database, use the following command:
+
+```bash
+   pnpm --filter backend migration:run
+```
+
+5. To seed your database with initial data, run:
+
+```bash
+   pnpm --filter backend seed
+
+```
+
+6. To run both the frontend and backend in development mode simultaneously, use the following command:
 
 ```bash
    pnpm dev
-```
-
-## Environment Variables
-
-**Backend Environment Variable**
-
-```bash
-DB_HOST=localhost
-DB_PORT=3306
-DB_USERNAME=root # depending on your username
-DB_PASSWORD=12345678 # depending on your password
-DB_NAME=earthquakes # depending on your db name
-SERVER_PORT=4000
-CORS_ORIGIN=http://localhost:3000
-CSV_FILE_PATH=data/earthquakes1970-2014.csv
-```
-
-**Frontend Environment Variable**
-
-```bash
-NEXT_PUBLIC_GRAPHQL_URI=http://localhost:4000/graphql
 ```
