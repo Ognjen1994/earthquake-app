@@ -1,0 +1,34 @@
+type Earthquake {
+  id: ID!
+  location: String!
+  magnitude: Float!
+  date: String!
+}
+
+input EarthquakeInput {
+  location: String!
+  magnitude: Float!
+  date: String!
+}
+
+type Query {
+  earthquakes(limit: Int, offset: Int): [Earthquake]
+  earthquakeCount: Int
+}
+
+type Mutation {
+  addEarthquake(
+    location: String!
+    magnitude: Float!
+    date: String!
+  ): Earthquake!
+
+  updateEarthquake(
+    id: ID!
+    location: String
+    magnitude: Float
+    date: String
+  ): Earthquake!
+
+  deleteEarthquake(id: ID!): Boolean
+}
