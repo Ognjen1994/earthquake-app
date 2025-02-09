@@ -51,6 +51,13 @@ CSV_FILE_PATH=data/earthquakes1970-2014.csv
 NEXT_PUBLIC_GRAPHQL_URI=http://localhost:4000/graphql
 ```
 
+**Database Setup**
+Before running the application, ensure that you have created the required MySQL database.
+
+```bash
+CREATE DATABASE earthquakes;
+```
+
 To set up the application, follow these steps:
 
 1. **Install `pnpm` globally**:
@@ -83,3 +90,11 @@ To set up the application, follow these steps:
 ```bash
    pnpm dev
 ```
+
+Before running the application, ensure that you have created the required MySQL database.
+
+Create the database:
+bash
+Copy
+Edit
+CREATE DATABASE earthquakes;
