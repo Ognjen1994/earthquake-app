@@ -16,9 +16,6 @@ export default async function Home() {
     fetchPolicy: "no-cache",
   });
 
-  console.log("koji rezovi");
-  console.log(data);
-
   return (
     <div className="container mx-auto p-4">
       <EarthquakeTable
