@@ -30,10 +30,9 @@ The backend is built with:
 
 **Add Backend Environment Variable**
 
-# .env
-
 ```bash
 # .env
+
 DB_HOST=localhost
 DB_PORT=3306
 DB_USERNAME=root # depending on your username
@@ -48,6 +47,7 @@ CSV_FILE_PATH=data/earthquakes1970-2014.csv
 
 ```bash
 # .env
+
 NEXT_PUBLIC_GRAPHQL_URI=http://localhost:4000/graphql
 ```
 
