@@ -2,6 +2,7 @@ import { AppDataSource } from "../database/data-source";
 import { Earthquake } from "../database/entities/Earthquake";
 import csv from "csv-parser";
 import * as fs from "fs";
+import { EarthquakeCSVRow } from "../types/earthquake";
 
 async function seedData() {
   try {
@@ -20,7 +21,7 @@ async function seedData() {
 
       fs.createReadStream(process.env.CSV_FILE_PATH)
         .pipe(csv())
-        .on("data", (row: any) => {
+        .on("data", (row: EarthquakeCSVRow) => {
           const earthquake = new Earthquake();
           earthquake.location = `${row.Latitude}, ${row.Longitude}`;
           earthquake.magnitude = parseFloat(row.Magnitude);
