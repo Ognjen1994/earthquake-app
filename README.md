@@ -51,7 +51,6 @@ CSV_FILE_PATH=data/earthquakes1970-2014.csv
 NEXT_PUBLIC_GRAPHQL_URI=http://localhost:4000/graphql
 ```
 
-**Database Setup**
 Before running the application, ensure that you have created the required MySQL database.
 
 ```bash
