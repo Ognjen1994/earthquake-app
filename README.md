@@ -32,15 +32,15 @@ To set up the application, follow these steps:
 
 1. **Install `pnpm` globally**:
 
-   ```bash
+```bash
    npm install -g pnpm
-   ```
+```
 
 2. Install dependencies for both frontend and backend:
 
-   ```bash
+```bash
    pnpm install:all
-   ```
+```
 
 3. To run both the frontend and backend in development mode simultaneously, use the following command:
 
@@ -50,8 +50,7 @@ To set up the application, follow these steps:
 
 ## Environment Variables
 
-**Backend Environment Variables**
-Create a .env file in the backend directory with the following content:
+**Backend Environment Variable**
 
 ```bash
 DB_HOST=localhost
@@ -64,7 +63,7 @@ CORS_ORIGIN=http://localhost:3000
 CSV_FILE_PATH=data/earthquakes1970-2014.csv
 ```
 
-**Frontend Environment Variables**
+**Frontend Environment Variable**
 
 ```bash
 NEXT_PUBLIC_GRAPHQL_URI=http://localhost:4000/graphql
