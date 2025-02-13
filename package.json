@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "install:all": "pnpm install --filter backend && pnpm install --filter frontend",
-    "dev": "concurrently \"pnpm --filter frontend dev\" \"pnpm --filter backend dev\"",
-    "dev:backend": "pnpm --filter backend dev",
+    "docker:build": "pnpm --filter backend docker:build",
+    "docker:up": "pnpm --filter backend docker:up",
+    "docker:down": "pnpm --filter backend docker:down",
+    "install:frontend": "pnpm install --filter frontend",
     "dev:frontend": "pnpm --filter frontend dev"
   },
   "workspaces": [

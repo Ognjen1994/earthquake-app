@@ -4,9 +4,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc",
     "seed": "ts-node src/scripts/seed.ts",
-    "migration:generate": "typeorm-ts-node-commonjs migration:generate -d src/database/data-source.ts -o src/migrations/migration --outputJs false",
-    "migration:run": "typeorm-ts-node-commonjs migration:run -d src/database/data-source.ts"
+    "migration:generate": "typeorm-ts-node-commonjs migration:generate -d src/database/data-source.ts -o src/migrations/migration",
+    "migration:run": "typeorm-ts-node-commonjs migration:run -d src/database/data-source.ts",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker compose up",
+    "docker:down": "docker compose down"
   },
   "keywords": [],
   "author": "",
