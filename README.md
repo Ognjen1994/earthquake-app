@@ -33,7 +33,7 @@ The backend is built with:
 ```bash
 # .env
 
-DB_HOST=localhost
+DB_HOST=db
 DB_PORT=3306
 DB_USERNAME=root # depending on your username
 DB_PASSWORD=12345678 # depending on your password
@@ -59,33 +59,28 @@ CREATE DATABASE earthquakes;
 
 To set up the application, follow these steps:
 
-1. **Install `pnpm` globally**:
+1. Build Docker image:
 
 ```bash
-   npm install -g pnpm
+   pnpm docker:build
 ```
 
-2. Install dependencies for both frontend and backend:
+2. Start services defined in docker compose and start Backend:
 
 ```bash
-   pnpm install:all
+   pnpm docker:up
 ```
 
-4. To apply the generated migrations to your database, use the following command:
+3. Install Frontend dependencies:
 
 ```bash
-   pnpm --filter backend migration:run
+   pnpm install:frontend
 ```
 
-5. To seed your database with initial data, run:
+4. Start Frontend:
 
 ```bash
-   pnpm --filter backend seed
-
+   pnpm dev:frontend
 ```
 
-6. To run both the frontend and backend in development mode simultaneously, use the following command:
-
-```bash
-   pnpm dev
-```
+Acess application on localhost:3000
